@@ -1,0 +1,36 @@
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 72px 1fr;
+}
+
+.shell-body {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(220px, 20%) 1fr;
+}
+
+.shell-body.sidebar-collapsed {
+  grid-template-columns: 60px 1fr;
+}
+
+.content {
+  padding: 24px;
+  background: var(--surface);
+}
+
+@media (max-width: 1100px) {
+  .shell-body {
+    grid-template-columns: minmax(200px, 32%) 1fr;
+  }
+}
+
+@media (max-width: 820px) {
+  .shell-body {
+    grid-template-columns: 1fr;
+  }
+
+  app-sidebar {
+    display: none;
+  }
+}

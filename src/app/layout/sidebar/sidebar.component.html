@@ -1,0 +1,66 @@
+<aside class="sidebar" [class.collapsed]="collapsed">
+  <div class="sidebar-header">
+    <div class="sidebar-title">Navigation</div>
+    <button type="button" class="collapse-toggle" (click)="toggleCollapsed.emit()" aria-label="Toggle sidebar">
+      {{ collapsed ? '»' : '«' }}
+    </button>
+  </div>
+  <nav class="menu">
+    <ul class="list">
+      <li *ngFor="let item of items(); trackBy: trackByModuleId" [class.active]="activeModuleId === item.moduleId">
+        <button type="button" class="menu-top" (click)="toggleTopMenu(item)">
+          <span class="menu-row">
+            <ng-container *ngIf="isFontIcon(item.icon); else itemMaterialIcon">
+              <i [attr.class]="item.icon"></i>
+            </ng-container>
+            <ng-template #itemMaterialIcon>
+              <mat-icon>{{ item.icon || 'folder' }}</mat-icon>
+            </ng-template>
+            <span *ngIf="!collapsed">{{ item.title }}</span>
+          </span>
+          <span class="expand-icon" *ngIf="item.submenu.length">{{ activeModuleId === item.moduleId ? '-' : '+' }}</span>
+        </button>
+
+        <ul class="ml-menu" *ngIf="activeModuleId === item.moduleId && item.submenu.length">
+          <li *ngFor="let child of item.submenu; trackBy: trackBySubmoduleId"
+            [class.active]="activeSubmoduleId === child.submoduleId && activeModuleId === item.moduleId">
+            <button type="button" class="submenu-link" (click)="toggleFirstLevel(item, child, $event)">
+              <span class="menu-row">
+                <ng-container *ngIf="isFontIcon(child.icon); else childMaterialIcon">
+                  <i [attr.class]="child.icon"></i>
+                </ng-container>
+                <ng-template #childMaterialIcon>
+                  <mat-icon>{{ child.icon || 'chevron_right' }}</mat-icon>
+                </ng-template>
+                <span *ngIf="!collapsed">{{ child.title }}</span>
+              </span>
+              <span class="expand-icon" *ngIf="child.submenu.length || child.submoduleId">{{ activeSubmoduleId === child.submoduleId ? '-' : '+' }}</span>
+            </button>
+
+            <div class="submenu-loading" *ngIf="activeSubmoduleId === child.submoduleId && loadingSubmoduleId === child.submoduleId && !child.submenu.length">
+              <span class="loader-dot"></span>Loading...
+            </div>
+
+            <ul class="ml-menu-2" *ngIf="!collapsed && activeSubmoduleId === child.submoduleId && child.submenu.length">
+              <li *ngFor="let grandChild of child.submenu; trackBy: trackBySubmoduleId"
+                [class.active]="activeSubSubmoduleId === grandChild.submoduleId && activeSubmoduleId === child.submoduleId">
+                <button type="button" class="submenu-link submenu-2-link" (click)="toggleSecondLevel(item, child, grandChild, $event)">
+                  <span *ngIf="!collapsed">{{ grandChild.title }}</span>
+                  <span class="expand-icon" *ngIf="grandChild.submenu.length">{{ activeSubSubmoduleId === grandChild.submoduleId ? '-' : '+' }}</span>
+                </button>
+
+                <ul class="ml-menu-3" *ngIf="activeSubSubmoduleId === grandChild.submoduleId && grandChild.submenu.length">
+                  <li *ngFor="let greatGrandChild of grandChild.submenu; trackBy: trackBySubmoduleId">
+                    <button type="button" class="submenu-link submenu-3-link" (click)="openLeafMenu(greatGrandChild)">
+                      {{ greatGrandChild.title }}
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</aside>

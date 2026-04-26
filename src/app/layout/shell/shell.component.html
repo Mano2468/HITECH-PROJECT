@@ -1,0 +1,10 @@
+<div class="shell">
+  <app-header (openSettings)="toggleSettingsPanel()" />
+  <div class="shell-body" [class.sidebar-collapsed]="sidebarCollapsed">
+    <app-sidebar [collapsed]="sidebarCollapsed" (toggleCollapsed)="toggleSidebar()" />
+    <main class="content">
+      <router-outlet />
+    </main>
+  </div>
+  <app-right-sidebar [open]="settingsOpen" (closePanel)="settingsOpen = false" />
+</div>

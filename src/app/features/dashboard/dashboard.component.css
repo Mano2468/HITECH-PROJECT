@@ -1,0 +1,54 @@
+.dashboard {
+  display: grid;
+  gap: 24px;
+}
+
+.hero {
+  padding: 28px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(15, 118, 110, 0.16), transparent 30%),
+    linear-gradient(135deg, var(--panel) 0%, rgba(255,255,255,0.86) 100%);
+  border: 1px solid rgba(21, 32, 51, 0.08);
+}
+
+.eyebrow {
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 8px 0 10px;
+}
+
+p {
+  color: var(--muted);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  border-radius: 20px;
+}
+
+.info-card mat-card-content {
+  display: grid;
+  gap: 12px;
+}
+
+.info-card mat-icon {
+  color: var(--brand);
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

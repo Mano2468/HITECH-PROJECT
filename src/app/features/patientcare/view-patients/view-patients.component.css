@@ -1,0 +1,7 @@
+.patient-view {
+  padding: 1rem;
+}
+
+.patient-view mat-card {
+  min-height: 200px;
+}

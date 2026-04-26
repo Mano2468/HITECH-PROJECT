@@ -1,0 +1,15 @@
+{
+    "Patient Name":"Patient Name (రోగి పేరు)",
+    "Sex": "Sex (లింగం)",
+    "UHID No": "UHID No (అద్వితీయ ఆరోగ్య గుర్తింపు సంఖ్య)",
+    "Age" : "Age (వయం)",
+    "IPD No" : "IPN No (అంతర్గత విభాగ నంబర్)",
+    "Bed No" : "Bed No (శయ్యా సంఖ్య)",
+    "Patient or Patient’s Relatives" : "Patient or Patient’s Relatives (రోగి లేదా రోగి యొక్క బంధువులు)",
+    "Admission Staff" : "Admission Staff (ప్రవేశ సిబ్బంది )",
+    "Name" : "Name (పేరు)",
+    "Signature" : "Signature(సంతకం సంతకం)",
+    "Date" : "Date (తేదీ)",
+    "Time" : "Time (సమయం)"
+
+}

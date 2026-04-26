@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="brand">
+    <div class="brand-mark">A21</div>
+    <div>
+      <div class="brand-title">Fresh Angular 21</div>
+      <div class="brand-subtitle">Material + Zoneless + Auth Shell</div>
+    </div>
+  </div>
+
+  <div class="header-actions">
+    <div class="user-copy">
+      <div class="user-name">{{ user()?.fullName }}</div>
+      <div class="user-role">Authenticated Session</div>
+    </div>
+    <button mat-icon-button aria-label="Theme settings" (click)="openSettings.emit()">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Logout" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+</header>

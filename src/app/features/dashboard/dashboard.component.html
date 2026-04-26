@@ -1,0 +1,38 @@
+<section class="dashboard">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Dashboard</div>
+      <h1>Welcome {{ user()?.fullName }}</h1>
+      <p>
+        This is a fresh zoneless Angular 21 shell with Material login, authenticated routing,
+        top header, left menu, and a right theme panel.
+      </p>
+    </div>
+  </div>
+
+  <div class="cards">
+    <mat-card class="info-card">
+      <mat-card-content>
+        <mat-icon>verified_user</mat-icon>
+        <h3>Authenticated Routing</h3>
+        <p>Protected dashboard route with a simple login flow.</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="info-card">
+      <mat-card-content>
+        <mat-icon>palette</mat-icon>
+        <h3>Theme Switching</h3>
+        <p>Change the project look from the right-side theme panel.</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="info-card">
+      <mat-card-content>
+        <mat-icon>bolt</mat-icon>
+        <h3>Zoneless App</h3>
+        <p>Uses signal-based state and zoneless change detection.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>

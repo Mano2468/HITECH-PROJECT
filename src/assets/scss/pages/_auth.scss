@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+// body {
+//   overflow: hidden;
+// }
+
+ .loginsec{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  // background:linear-gradient(to bottom, #2b2bd5, #07108c);
+  background: #00b4ff;
+}
+
+section .colour {
+  position: absolute;
+  filter: blur(150px);
+}
+
+
+
+.box {
+  position: relative;
+}
+
+
+@keyframes animate {
+
+  0%,
+  100% {
+      transform: translateY(-40px);
+  }
+
+  50% {
+      transform: translateY(40px);
+  }
+}
+
+
+.container {
+  width: 520px;
+  display: flex;
+  min-height: 520px;
+  position: relative;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  position: relative;
+}
+
+.form h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  position: relative;
+  letter-spacing: 1px;
+  margin-bottom: 65px;
+}
+
+.form h2::before {
+  left: 0;
+  width: 80px;
+  height: 4px;
+  content: "";
+  bottom: -10px;
+  background: #fff;
+  position: absolute;
+}
+
+.form .input__box {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.form .input__box input {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px 37px;
+  letter-spacing: 1px;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form::placeholder {
+  color: #fff;
+}
+
+.form .input__box input[type="submit"] {
+  color: #666;
+  cursor: pointer;
+  background: #fff;
+  max-width: 140px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.forget {
+  color: #fff;
+margin-top: 15px;
+margin-left: 8px;
+}
+
+.forget a {
+  color: #fff;
+  text-decoration: none;
+}
+// section .colour:nth-child(1) {
+//   top: -350px;
+//   width: 600px;
+//   height: 600px;
+//   background: #3134ee;
+// }
+
+// section .colour:nth-child(2) {
+//   left: 100px;
+//   width: 500px;
+//   height: 500px;
+//   bottom: -150px;
+//   background: #4a18d5;
+// }
+
+// section .colour:nth-child(3) {
+//   right: 100px;
+//   bottom: 50px;
+//   width: 300px;
+//   height: 300px;
+//   background: #2b67f3;
+// }
+
+
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: #80808029;
+  color: white;
+  text-align: center;
+}
+.footer p {
+  margin: 0;
+line-height: normal;
+text-align: center;
+font-size: 14px;
+font-weight: 500;
+color: #fff;
+padding: 0px 0px;
+background-color: #80808029;
+}
+.erp_logo {
+position: absolute;
+top: 0px;
+left: 0px;
+}
+.logo_sec {
+height: 130px;
+}
+.fas.fa-user-alt {
+position: absolute;
+top: 146px;
+left: 52px;
+font-size: 18px;
+color: #fff;
+}
+.fas.fa-lock{
+position: absolute;
+top: 219px;
+left: 52px;
+font-size: 18px;
+color: #fff;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.auth-spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  border-top-color: #000000;
+  animation: spinner 0.8s linear infinite;
+}
+.face-icon {
+  color: rgba(0, 0, 0, 0.55);
+}
+.show-pwd-icon {
+  color: rgb(249, 249, 249);
+  padding: 12px;
+}
+.hideshow{
+  position: absolute;
+right: 45px;
+top: 205px;
+}
+.inputbutton{
+  background-color: #fff;
+border: none;
+color: #000000d6;;
+padding: 12px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 4px;
+cursor: pointer;
+width: 33%;
+border-radius: 18px;
+font-weight: 700;
+}

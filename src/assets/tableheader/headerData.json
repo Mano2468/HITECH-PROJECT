@@ -1,0 +1,27 @@
+[
+    {
+        "Module Name" : "Procure to Pay",
+        "slNo": "#Sl No",
+        "id": "ID",
+        "NoofUnits": "No. of Units",
+        "StoreRequisitionReference": "Store Requisition Reference",
+        "VendorQuotationRef": "Vendor Quotation Reference",
+        "timeinhand": "Time in Hand",
+        "RequisitionRef": "Requisition Ref.",
+        "Department":"Dept.",
+        "Document":"Docs."
+
+
+
+    },
+    {
+        "Module Name" : "Patient Care",
+        "UPRN" : "UHID",
+        "UPRNNO" :"UHID No.",
+        "Sl" :"Sl#",
+        "ModeofPayment" :"Mode Of Payment",
+
+        "Amount" :"Amount (In Rs.)"
+
+    }
+]

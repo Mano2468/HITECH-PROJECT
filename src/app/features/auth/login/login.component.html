@@ -1,0 +1,30 @@
+<section class="login-page">
+  <mat-card class="login-card">
+    <div class="login-mark">Angular 21</div>
+    <h1>Sign In</h1>
+    <p class="copy">Simple authenticated routing with a Material shell.</p>
+
+    <form [formGroup]="form" (ngSubmit)="submit()" class="login-form">
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide() ? 'password' : 'text'" formControlName="password">
+        <button mat-icon-button matSuffix type="button" (click)="hide.set(!hide())">
+          <mat-icon>{{ hide() ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      @if (error()) {
+        <div class="error">{{ error() }}</div>
+      }
+
+      <button mat-flat-button class="login-btn" type="submit" [disabled]="loading()">
+        {{ loading() ? 'Please wait...' : 'Login' }}
+      </button>
+    </form>
+  </mat-card>
+</section>

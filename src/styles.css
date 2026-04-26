@@ -1,0 +1,87 @@
+@import "./assets/fonts/themify-icons/themify-icons.css";
+@import "./assets/fonts/simple-line-icons/css/simple-line-icons.css";
+
+:root {
+  --brand: #0f766e;
+  --brand-strong: #115e59;
+  --accent: #f59e0b;
+  --surface: #f5f7fb;
+  --panel: #ffffff;
+  --text: #152033;
+  --muted: #637188;
+  --header: #0f172a;
+  --sidebar: #111827;
+  --sidebar-text: #dbe4f0;
+  --sidebar-active: rgba(255, 255, 255, 0.12);
+}
+
+body.theme-ocean {
+  --brand: #0f766e;
+  --brand-strong: #115e59;
+  --accent: #f59e0b;
+  --header: #0f172a;
+  --sidebar: #111827;
+  --sidebar-text: #dbe4f0;
+  --sidebar-active: rgba(255, 255, 255, 0.12);
+}
+
+body.theme-royal {
+  --brand: #2563eb;
+  --brand-strong: #1e40af;
+  --accent: #7c3aed;
+  --header: #1d4ed8;
+  --sidebar: #1e40af;
+  --sidebar-text: #e2e8f0;
+  --sidebar-active: rgba(255, 255, 255, 0.16);
+}
+
+body.theme-sunset {
+  --brand: #c2410c;
+  --brand-strong: #9a3412;
+  --accent: #dc2626;
+  --header: #991b1b;
+  --sidebar: #7c2d12;
+  --sidebar-text: #f7fee7;
+  --sidebar-active: rgba(255, 255, 255, 0.16);
+}
+
+body.dark-shell {
+  --surface: #0b1220;
+  --panel: #111827;
+  --text: #ebf1ff;
+  --muted: #9aa7bd;
+  --header: #020617;
+  --sidebar: #020617;
+  --sidebar-text: #cdd7e7;
+  --sidebar-active: rgba(255, 255, 255, 0.08);
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Roboto, Arial, sans-serif;
+  background: var(--surface);
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.mat-icon,
+.material-icons,
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}

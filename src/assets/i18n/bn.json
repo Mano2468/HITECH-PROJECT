@@ -1,0 +1,15 @@
+{
+    "Patient Name":"Patient Name (রোগীর নাম)",
+    "Sex": "Sex (যৌন)",
+    "UHID No": "UHID No (অদ্বিতীয় স্বাস্থ্য সনাক্তকরণ নম্বর)",
+    "Age" : "Age (বয়স)",
+    "IPD No" : "IPN No (অন্তর্ভুক্ত বিভাগ নম্বর)",
+    "Bed No" : "Bed No (শয্যা সংখ্যা)",
+    "Patient or Patient’s Relatives" : "Patient or Patient’s Relatives (রোগী বা রোগীর আত্মীয়)",
+    "Admission Staff" : "Admission Staff (ভর্তি কর্মী)",
+    "Name" : "Name (নাম)",
+    "Signature" : "Signature (স্বাক্ষর)",
+    "Date" : "Date (তারিখতারিখ)",
+    "Time" : "Time (সময়)"
+
+}
